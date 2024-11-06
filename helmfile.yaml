@@ -14,16 +14,20 @@ releases:
   - name: kratos-ui
     chart: ./kratos-ui-node/charts
     namespace: auth
-  - name: backend-app
-    chart: ./apps/backend/charts
-    namespace: auth
-  - name: location-app
-    chart: ./apps/location-api/charts
-    namespace: auth
-  - name: oathkeeper
-    chart: ory/oathkeeper
-    namespace: auth
-    values:
-      - oathkeeper/values.yaml
-    needs:
-      - kratos
+
+  # - name: kratos-custom-webhook
+  #   chart: ./custom_webhook/api/charts
+  #   namespace: auth
+  # - name: oathkeeper
+  #   chart: ory/oathkeeper
+  #   namespace: auth
+  #   values:
+  #     - oathkeeper/values.yaml
+  #   needs:
+  #     - kratos
+  # - name: backend-app
+  #   chart: ./apps/backend/charts
+  #   namespace: auth
+  # - name: location-app
+  #   chart: ./apps/location-api/charts
+  #   namespace: auth

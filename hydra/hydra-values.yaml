@@ -160,6 +160,8 @@ hydra:
       access_token: jwt
       jwt:
         scope_claim: list
+    oauth2:
+      token_hook: http://kratos-custom-webhook-charts.auth.svc/add_claims
     # -- Enables database migration
   automigration:
     enabled: true
